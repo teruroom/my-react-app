@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 class App extends Component {
   render() {
     return (
-      <h1>Hello world</h1>
+      <div>
+        <input type="text" />
+        <button>SEND</button>
+      </div>
     );
   }
 }
