@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
+import { FormApp } from './FormApp';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <input type="text" />
-        <button>SEND</button>
-      </div>
+      <FormApp />
     );
   }
 }
