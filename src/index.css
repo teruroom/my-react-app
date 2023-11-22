@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+input{
+  background-color: aliceblue;
+}
+button{
+  border-radius: 4px;
+  background-color: rgb(50, 100, 84);
+  color:white;
+}
+.message{
+  margin-top: 3px;
+  width:150px;
+  background-color: dimgray;
+  color: azure;
+}

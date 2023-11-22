@@ -1,18 +1,33 @@
 import React,{Component} from "react"
 
 export class FormApp extends Component{
-  handleInput(){
-    console.log('handleInput called!')
+  constructor(props){
+    super(props);
+    this.state={
+       value: ''
+      ,message: ''
+    }
+    this.handleInput=this.handleInput.bind(this);
+    this.send=this.send.bind(this);
+  };
+  handleInput({target:{value}}){
+    console.log('handleInput called!');
+    this.setState({value});
   }
   send(){
-    console.log('send called!')
+    const {value}=this.state;
+    this.setState({
+       value:''
+      ,message:value
+    });
   }
 
   render(){
     return(
       <div>
-        <input type="text" onChange={this.handleInput.bind(this)}/>
-        <button onClick={this.send.bind(this)}>SEND</button>
+        <input type="text" value={this.state.value} onChange={this.handleInput}/>
+        <button onClick={this.send}>SEND</button>
+        <div class="message">{this.state.message}</div>
       </div>
     );
   }  
